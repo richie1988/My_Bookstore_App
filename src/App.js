@@ -12,7 +12,7 @@ function App() {
       <nav>
         <ul>
           <li>
-            <Link to="/books">Books</Link>
+            <Link to="/">Books</Link>
           </li>
           <li>
             <Link to="/categories">Categories</Link>
@@ -20,7 +20,7 @@ function App() {
         </ul>
       </nav>
       <Routes>
-        <Route path="/books" element={<Books />} />
+        <Route path="/" element={<Books />} />
         <Route path="/categories" element={<Categories />} />
       </Routes>
     </BrowserRouter>
