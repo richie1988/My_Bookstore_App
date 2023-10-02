@@ -1,27 +1,32 @@
-import React, { useState } from 'react';
-import BookList from '../components/bookList';
+import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import { useSelector, useDispatch } from 'react-redux';
+import { addBook, removeBook } from '../redux/books/bookSlice';
+import BookDisplay from '../components/booksDisplay';
 import BookForm from '../components/bookForm';
 
 function Books() {
-  const [books, setBooks] = useState([
-    { id: 1, title: 'Book 1', author: 'Author 1' },
-    { id: 2, title: 'Book 2', author: 'Author 2' },
-  ]);
-
-  const handleDeleteBook = (bookId) => {
-    const updatedBooks = books.filter((book) => book.id !== bookId);
-    setBooks(updatedBooks);
-  };
+  const books = useSelector((state) => state.books.books);
+  const dispatch = useDispatch();
 
   const handleAddBook = (newBook) => {
-    setBooks([...books, { ...newBook, id: Date.now() }]);
+    const bookWithId = { ...newBook, item_id: uuidv4() };
+    dispatch(addBook(bookWithId));
+  };
+
+  const handleDeleteBook = (itemId) => {
+    const bookToDelete = books.find((book) => book.item_id === itemId);
+
+    if (bookToDelete) {
+      dispatch(removeBook(itemId));
+    }
   };
 
   return (
     <div>
       <h2>Books</h2>
       <BookForm onAdd={handleAddBook} />
-      <BookList books={books} onDelete={handleDeleteBook} />
+      <BookDisplay books={books} onDelete={handleDeleteBook} />
     </div>
   );
 }
