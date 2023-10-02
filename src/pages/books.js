@@ -1,4 +1,5 @@
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import { useSelector, useDispatch } from 'react-redux';
 import { addBook, removeBook } from '../redux/books/bookSlice';
 import BookDisplay from '../components/booksDisplay';
@@ -9,7 +10,8 @@ function Books() {
   const dispatch = useDispatch();
 
   const handleAddBook = (newBook) => {
-    dispatch(addBook(newBook));
+    const bookWithId = { ...newBook, item_id: uuidv4() };
+    dispatch(addBook(bookWithId));
   };
 
   const handleDeleteBook = (itemId) => {
