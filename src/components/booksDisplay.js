@@ -7,7 +7,7 @@ function BookDisplay({ books, onDelete }) {
     <div>
       <h2>Book List</h2>
       {books.map((book) => (
-        <Book key={book.id} book={book} onDelete={onDelete} />
+        <Book key={book.item_id} book={book} onDelete={() => onDelete(book.item_id)} />
       ))}
     </div>
   );
@@ -16,7 +16,7 @@ function BookDisplay({ books, onDelete }) {
 BookDisplay.propTypes = {
   books: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      item_id: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
       author: PropTypes.string.isRequired,
     }),

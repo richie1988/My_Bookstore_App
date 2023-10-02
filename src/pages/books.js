@@ -12,8 +12,12 @@ function Books() {
     dispatch(addBook(newBook));
   };
 
-  const handleDeleteBook = (bookIndex) => {
-    dispatch(removeBook(bookIndex));
+  const handleDeleteBook = (itemId) => {
+    const bookToDelete = books.find((book) => book.item_id === itemId);
+
+    if (bookToDelete) {
+      dispatch(removeBook(itemId));
+    }
   };
 
   return (
