@@ -27,7 +27,6 @@ function Book({ book, onDelete }) {
   );
 }
 
-// Define PropTypes for the component.
 Book.propTypes = {
   book: PropTypes.shape({
     title: PropTypes.string.isRequired,
