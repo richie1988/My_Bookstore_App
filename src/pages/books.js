@@ -9,13 +9,11 @@ function Books() {
   ]);
 
   const handleDeleteBook = (bookId) => {
-    // Remove the book from the state (you can also send a DELETE request to an API).
     const updatedBooks = books.filter((book) => book.id !== bookId);
     setBooks(updatedBooks);
   };
 
   const handleAddBook = (newBook) => {
-    // Add a new book to the state (you can also send a POST request to an API).
     setBooks([...books, { ...newBook, id: Date.now() }]);
   };
 
