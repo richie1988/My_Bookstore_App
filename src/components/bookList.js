@@ -1,28 +1,37 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Book from './book';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import Book from './books';
+import BookForm from './bookForm';
+import { fetchBooks } from '../redux/books/bookSlice';
+import Indicator from './Indicator';
 
-function BookList({ books, onDelete }) {
-  return (
-    <div>
-      <h2>Book List</h2>
-      {books.map((book) => (
-        <Book key={book.id} book={book} onDelete={onDelete} />
-      ))}
-    </div>
-  );
-}
+const BookList = () => {
+  const books = useSelector((store) => store.book.books);
+  const statusFetch = useSelector((store) => store.book.statusFetch);
+  const dispatch = useDispatch();
 
-// Define PropTypes for the component.
-BookList.propTypes = {
-  books: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      author: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
-  onDelete: PropTypes.func.isRequired,
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, [dispatch]);
+
+  if (statusFetch === 'loading') {
+    return <div className="loading"><Indicator /></div>;
+  } if (statusFetch === 'succeeded') {
+    return (
+      <div>
+        <div className="book-list">
+          {books.map((book) => (
+            <Book key={books.itemId || books.item_id || uuidv4()} book={book} />
+          ))}
+        </div>
+        <div>
+          <BookForm />
+        </div>
+      </div>
+    );
+  }
+  return <div>Failed to fetch data</div>;
 };
 
 export default BookList;
