@@ -1,54 +1,78 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import { addBookAsync } from '../redux/books/bookSlice';
 
-function BookForm({ onAdd }) {
-  const [newBook, setNewBook] = useState({ title: '', author: '' });
+const BookForm = () => {
+  const dispatch = useDispatch();
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
 
-  // Handle changes in the input fields
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setNewBook({ ...newBook, [name]: value });
+  const handleTitle = (e) => {
+    setTitle(e.target.value);
   };
 
-  // Handle form submission
-  const handleSubmit = (e) => {
+  const handleAuthor = (e) => {
+    setAuthor(e.target.value);
+  };
+
+  const handleCategory = (e) => {
+    setCategory(e.target.value);
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    onAdd(newBook);
-    setNewBook({ title: '', author: '' });
+
+    if (category) {
+      const newBook = {
+        item_id: uuidv4(),
+        title,
+        author,
+        category,
+      };
+
+      dispatch(addBookAsync(newBook));
+
+      setTitle('');
+      setAuthor('');
+      setCategory('');
+    }
   };
+
+  const isFormValid = !!category;
 
   return (
-    <div>
+    <div className="book-input">
       <h2>Add a New Book</h2>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="title">
-          Title:
-          <input
-            type="text"
-            name="title"
-            id="title"
-            value={newBook.title}
-            onChange={handleChange}
-          />
-        </label>
-        <label htmlFor="author">
-          Author:
-          <input
-            type="text"
-            name="author"
-            id="author"
-            value={newBook.author}
-            onChange={handleChange}
-          />
-        </label>
-        <button type="submit">Add Book</button>
+        <input
+          type="text"
+          placeholder="Book Title"
+          value={title}
+          onChange={handleTitle}
+        />
+        <input
+          type="text"
+          placeholder="Author"
+          value={author}
+          onChange={handleAuthor}
+        />
+        <select
+          value={category}
+          onChange={handleCategory}
+        >
+          <option value="" disabled>
+            Select Category
+          </option>
+          <option value="Fiction">Fiction</option>
+          <option value="Non-Fiction">Non-Fiction</option>
+          <option value="Science Fiction">Science Fiction</option>
+        </select>
+        <button type="submit" disabled={!isFormValid}>Add Book</button>
       </form>
     </div>
   );
-}
-
-BookForm.propTypes = {
-  onAdd: PropTypes.func.isRequired,
 };
 
 export default BookForm;
