@@ -17,7 +17,7 @@
 }
 
 .nav-container h1 {
-  color: blue;
+  color: #0290ff;
   font-weight: 700;
   font-size: 16px;
   padding: 10px;
@@ -61,13 +61,12 @@
 
   .nav-container .NavLinks a {
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
+    color: #121212;
+    font-weight: 500;
   }
 
   .nav-container h1 {
-    margin-left: 3.9rem;
-    color: blue;
+    margin-left: 7.5rem;
     font-weight: 700;
     font-size: 33px;
   }
@@ -87,6 +86,7 @@
   .userProfile {
     margin-left: auto;
     padding: 40px;
+    margin-right: 5.5%;
   }
 
   .userProfile img {
