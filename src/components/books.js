@@ -40,9 +40,15 @@ const Book = ({ book }) => {
         </div>
       </div>
       <section className="book-progress">
-        <CircularProgressbar value={progress} text={`${progress}%`} />
-        <span className="completed">Completed</span>
-        |
+        <CircularProgressbar value={progress} />
+        <div className="completed">
+          <h2>
+            {progress}
+            %
+          </h2>
+          <span>Completed</span>
+        </div>
+        <div className="vertical-line" />
         <div className="update-progress-section">
           <span>Current Page</span>
           <p>

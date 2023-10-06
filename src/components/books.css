@@ -6,7 +6,8 @@
   align-items: center;
   justify-content: space-between;
   border: 2px solid rgb(109, 103, 103);
-  box-shadow: 2px 2px 12px rgb(109, 107, 107);
+  box-shadow: 2px 2px 12px #bebbbb;
+  background-color: rgb(255, 255, 255);
   margin: 22px auto;
   padding: 16px;
   border-radius: 6px;
@@ -20,6 +21,7 @@
   width: 100%;
   height: auto;
   margin: auto;
+  background-color: #ffff;
 }
 
 .book-category {
@@ -62,6 +64,7 @@
   font-style: normal;
   color: rgb(79, 142, 197);
   margin: auto;
+  background: transparent;
 }
 
 .book-progress {
@@ -73,6 +76,20 @@
   margin-left: auto;
   justify-content: space-between;
   font-size: 22px;
+}
+
+.completed {
+  display: block;
+  font-weight: 400;
+}
+
+.completed h2 {
+  margin-bottom: -0.6rem;
+}
+
+.vertical-line {
+  border-right: 3px solid rgb(212, 208, 208);
+  height: 70px;
 }
 
 .book-progress span {

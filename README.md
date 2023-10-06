@@ -112,7 +112,10 @@ npm start
 To run the project:
 
 ```bash
+
 npm install
+npm run
+npm start
 ```
 
 ### Run tests
@@ -159,6 +162,7 @@ I would like Thank Microverse Team and my Collabaration partners whom they have 
 - **[Consumption of more APIs]**
 - **[More dynamic styling]**
 - **[Improved UX interaction]**
+- **[Categories page]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
