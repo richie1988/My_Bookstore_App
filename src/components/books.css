@@ -1,0 +1,230 @@
+.book-container {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid rgb(109, 103, 103);
+  box-shadow: 2px 2px 12px rgb(109, 107, 107);
+  margin: 22px auto;
+  padding: 16px;
+  border-radius: 6px;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.book-header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.book-category {
+  opacity: 0.5;
+  font-size: 19px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.book-title {
+  font-size: 17px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.2px;
+  color: var(--black-two);
+}
+
+.book-author {
+  font-size: 17px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: rgb(79, 142, 197);
+}
+
+.book-actions {
+  font-size: large;
+}
+
+.book-actions button {
+  border: none;
+  font-size: 19px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  color: rgb(79, 142, 197);
+  margin: auto;
+}
+
+.book-progress {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: auto;
+  justify-content: space-between;
+  font-size: 22px;
+}
+
+.book-progress span {
+  opacity: 0.5;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.CircularProgressbar {
+  width: 16%;
+}
+
+.update-progress-section {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: fit-content;
+}
+
+.book-progress button {
+  display: flex;
+  padding: 8px;
+  border-radius: 3px;
+  background-color: rgb(0, 0, 255);
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: rgb(245, 245, 245);
+  border: none;
+}
+
+/* Desktop starts here */
+
+@media only screen and (min-width: 1000px) {
+  .book-container {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid rgb(109, 103, 103);
+    box-shadow: 2px 2px 12px rgb(109, 107, 107);
+    margin: 22px  auto;
+    padding: 16px;
+    border-radius: 6px;
+    flex-wrap: nowrap;
+  }
+
+  .book-header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin: auto 60px;
+  }
+
+  .book-category {
+    opacity: 0.5;
+    font-size: 19px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    color: var(--black-two);
+    margin-top: 2rem;
+  }
+
+  .book-title {
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: -0.2px;
+    color: var(--black-two);
+  }
+
+  .book-author {
+    font-size: 17px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    color: rgb(79, 142, 197);
+  }
+
+  .book-actions {
+    font-size: large;
+  }
+
+  .book-actions button {
+    border: none;
+    font-size: 19px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    color: rgb(79, 142, 197);
+    margin-left: -5px;
+  }
+
+  .book-progress {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+    font-size: 22px;
+  }
+
+  .book-progress span {
+    opacity: 0.5;
+    font-size: 1.2rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: var(--black-two);
+  }
+
+  .CircularProgressbar {
+    width: 99px;
+  }
+
+  .update-progress-section {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: fit-content;
+  }
+
+  .book-progress button {
+    width: 11.5rem;
+    height: 2.063rem;
+    border-radius: 3px;
+    background-color: rgb(0, 0, 255);
+    font-size: 19px;
+    font-weight: 500;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: rgb(245, 245, 245);
+    border: none;
+  }
+}
