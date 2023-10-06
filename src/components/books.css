@@ -134,7 +134,7 @@
 
 /* Desktop starts here */
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 768px) {
   .book-container {
     width: 80%;
     height: auto;
@@ -211,6 +211,14 @@
     font-size: 22px;
   }
 
+  .completed {
+    margin: auto 6px;
+  }
+
+  .vertical-line {
+    margin: auto 1.5rem;
+  }
+
   .book-progress span {
     opacity: 0.5;
     font-size: 1.2rem;
@@ -234,8 +242,9 @@
   }
 
   .book-progress button {
-    width: 11.5rem;
-    height: 2.063rem;
+    padding: 11px;
+    display: flex;
+    flex-direction: row;
     border-radius: 3px;
     background-color: rgb(0, 0, 255);
     font-size: 19px;

@@ -36,7 +36,7 @@
 
 /* Desktop */
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 768px) {
   .book-input h2 {
     text-align: start;
     margin-left: 10rem;

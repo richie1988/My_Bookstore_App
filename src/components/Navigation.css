@@ -46,7 +46,7 @@
   border: 2px solid grey;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 768px) {
   /* Your CSS styles for screens with a minimum width of 769px and above */
   .nav-container {
     width: 100%;
