@@ -6,7 +6,6 @@
   flex-direction: row;
   align-items: center;
   list-style: none;
-  box-shadow: 2px 2px 12px rgb(109, 107, 107);
 }
 
 .nav-container .NavLinks a {
