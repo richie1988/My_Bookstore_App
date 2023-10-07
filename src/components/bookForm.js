@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBookAsync } from '../redux/books/bookSlice';
+import './bookForm.css';
 
 const BookForm = () => {
   const dispatch = useDispatch();
@@ -44,6 +45,7 @@ const BookForm = () => {
 
   return (
     <div className="book-input">
+      <hr />
       <h2>Add a New Book</h2>
       <form onSubmit={handleSubmit}>
         <input
@@ -59,6 +61,7 @@ const BookForm = () => {
           onChange={handleAuthor}
         />
         <select
+          className="books-option"
           value={category}
           onChange={handleCategory}
         >

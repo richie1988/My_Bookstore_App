@@ -1,8 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import UserProfile from './user.png';
+import './Navigation.css';
 
-const NavMenuItem = ({ to, children }) => (
+const MenuItem = ({ to, children }) => (
   <li>
     <NavLink to={to}>
       {children}
@@ -10,31 +12,24 @@ const NavMenuItem = ({ to, children }) => (
   </li>
 );
 
-NavMenuItem.propTypes = {
+MenuItem.propTypes = {
   to: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 };
 
-export default NavMenuItem;
+const NavLinks = () => (
+  <header className="nav-container">
+    <h1>Richards Bookstore</h1>
+    <nav className="NavLinks">
+      <ul>
+        <MenuItem to="./">Books</MenuItem>
+        <MenuItem to="/categories">Categories</MenuItem>
+      </ul>
+    </nav>
+    <li className="userProfile">
+      <img src={UserProfile} alt="User Profile" />
+    </li>
+  </header>
+);
 
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-
-// function Navigation() {
-//   return (
-//     <div className="nav-container">
-//       <nav>
-//         <ul>
-//           <li>
-//             <Link to="/books">Books</Link>
-//           </li>
-//           <li>
-//             <Link to="/categories">Categories</Link>
-//           </li>
-//         </ul>
-//       </nav>
-//     </div>
-//   );
-// }
-
-// export default Navigation;
+export default NavLinks;

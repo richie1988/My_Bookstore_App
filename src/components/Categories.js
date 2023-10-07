@@ -1,5 +1,6 @@
 import React from 'react';
 import Indicator from './Indicator';
+import './category.css';
 
 const Categories = () => (
   <div id="categories">

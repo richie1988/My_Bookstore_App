@@ -3,14 +3,14 @@ import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import App from './App';
 import store from './redux/store';
-import './Books.css';
+import './index.css';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <div id="App-Wrapper">
+      <div className="App-Wrapper">
         <App />
       </div>
     </Provider>

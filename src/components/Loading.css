@@ -1,14 +1,11 @@
-body {
-  position: relative;
-}
-
 .status-container {
   position: fixed;
+  left: 50%;
   top: 0;
   bottom: 0;
   width: 20px;
   height: 20px;
-  background: #ffffff98;
+  background: rgba(255, 255, 255, 0.596);
 }
 
 .status {
