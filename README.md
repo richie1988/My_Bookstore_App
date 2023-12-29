@@ -15,7 +15,7 @@ BOOKSTORE-APP
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Feature ](#key-feature-)
-  - [🚀 Live Demo (https://richie1988.github.io/My\_Bookstore\_App/)](#-live-demo-httpsrichie1988githubiomy_bookstore_app)
+  - [🚀 Live Demo ](#-live-demo-)
   - [📹 Video Presentation ](#-video-presentation-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
@@ -65,7 +65,8 @@ so that other developer's can find them or see what the have built.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🚀 Live Demo <a name="live-demo">(https://richie1988.github.io/My_Bookstore_App/)</a>
+## 🚀 Live Demo <a name="live-demo"></a>
+- [Live](https://richie1988.github.io/My_Bookstore_App/)
 
 ## 📹 Video Presentation <a name="video-presentation"></a>
 
