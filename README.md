@@ -3,7 +3,7 @@ BOOKSTORE-APP
 <a name="Richard Sikaonga"></a>
 
 <div  align="center">
-<!--<img src="src/assets/RIYI-LOGO.png" alt="logo" width="160" border-radius=" 40px" height="auto"/>-->
+<img src="chrome_8RJmORUAEk.png" alt="logo" width="160" border-radius=" 40px" height="auto"/>
 <br/>
   <h3><b>My Bookstore</b></h3>
 </div>
