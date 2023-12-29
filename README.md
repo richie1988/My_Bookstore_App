@@ -30,9 +30,7 @@ BOOKSTORE-APP
   - [📝 License ](#-license-)
 
 # 📖 [Bookstore] <a name="about-project"></a>
-
-This is the web Math Calculation app that will help other developer get motivated on creating the react and API apps .
-Its Mobile vision app and can be accessed on the Mobile devices and Desktop
+This is the Bookstore App that allows its users to read books to add books and to save there favourites books this app its easy to use and UI.
 
 **[Mobile portfolio app]** is a Mobile vision app that makes easier for Developers to chocase there projects
 so that other developer's can find them or see what the have built.
